@@ -111,3 +111,76 @@ class App extends React.Component{
 }
 
 ReactDOM.render(<App />, mountNode);
+
+--------------------------------------------------------------------------------------------------------------------------------------
+Play Nine
+-----------------
+
+const Stars = (props) => {
+	return(
+  	<div className="col-5">
+    	<i className="fa fa-star"></i>
+      <i className="fa fa-star"></i>
+      <i className="fa fa-star"></i>
+      <i className="fa fa-star"></i>
+    </div>
+  )
+}
+
+const Button = (props) => {
+	return(
+  	<div>
+      <button className="col-2">=</button>
+    </div>
+  )
+}
+
+const Answer = (props) => {
+	return(
+  	<div className="col-5">
+    ....
+    </div>
+  )
+}
+
+const Numbers = (props) => {
+	return(
+  	<div className="card text-center">
+    	<div>
+      	<span>1</span>
+        <span>2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+      </div>
+    </div>
+  )
+}
+
+class Game extends React.Component{
+	render(){
+  	return(
+    	<div className="container">
+      	<h3>Play Nine</h3>
+        <div className="row">
+        	<Stars />
+        	<Button />
+        	<Answer />
+        </div>
+        
+      </div>
+    )
+  }
+}
+
+class App extends React.Component{
+	render(){
+  	return(
+    	<div>
+      	<Game />
+      </div>
+    )
+  }
+}
+
+ReactDOM.render(<App />, mountNode);
